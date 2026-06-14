@@ -1,0 +1,17 @@
+target/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.so
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+Cargo.lock
+OPTIMIZATION_REPORT.md
+APPLIED_OPTIMIZATIONS.md
+BUILD_REPORT.md
+gaia_simpleeval/*.so
+gaia_simpleeval/__pycache__/
+tests/__pycache__/

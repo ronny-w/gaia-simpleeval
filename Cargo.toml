@@ -1,0 +1,24 @@
+[package]
+name = "gaia-simpleeval"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "High-performance drop-in replacement for simpleeval using Rust"
+license = "MIT"
+
+[lib]
+name = "_gaia_simpleeval"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.21", features = ["extension-module"] }
+num-bigint = "0.4"
+num-integer = "0.1"
+num-traits = "0.2"
+rand = "0.8"
+bumpalo = "3"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

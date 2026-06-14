@@ -1,0 +1,35 @@
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "gaia-simpleeval"
+version = "0.1.0"
+description = "High-performance drop-in replacement for simpleeval using Rust"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["simpleeval"]
+license = { text = "MIT" }
+authors = [{ name = "Ronny Weiser", email = "gaia.ronnyw@gmail.com" }]
+urls = { Homepage = "https://github.com/ronny-w/gaia-simpleeval", Repository = "https://github.com/ronny-w/gaia-simpleeval" }
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "simpleeval"]
+
+[tool.maturin]
+python-source = "."
+module-name = "gaia_simpleeval._gaia_simpleeval"
+features = ["pyo3/extension-module"]
+# Ensure the autopatch .pth file ships inside the wheel so the patch is applied
+# at interpreter startup.
+include = ["gaia_simpleeval/gaia_simpleeval.pth"]
