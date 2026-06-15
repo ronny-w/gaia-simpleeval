@@ -23,7 +23,7 @@ Or use the gaia API directly:
 
 More than 16x faster on average across complex real-world expressions, up to 25x on simple arithmetic:
 
-| Expression           | simpleeval | gaia-simpleeval | Speedup |
+| Case                 | simpleeval | gaia-simpleeval | Speedup |
 | -------------------- | ---------- | --------------- | ------- |
 | basic arithmetic     | 7.09 us    | 0.29 us         | 25x     |
 | pythagorean distance | 11.34 us   | 0.56 us         | 20x     |
@@ -31,7 +31,7 @@ More than 16x faster on average across complex real-world expressions, up to 25x
 | price calculation    | 10.50 us   | 0.61 us         | 17x     |
 | grade evaluation     | 17.04 us   | 1.03 us         | 17x     |
 | deep arithmetic      | 17.63 us   | 1.02 us         | 17x     |
-| AVERAGE              | 11.72 us   | 0.72 us         | 17x     |
+| **AVERAGE**          | **11.72 us** | **0.72 us**   | **17x** |
 
 ## Compatibility
 
